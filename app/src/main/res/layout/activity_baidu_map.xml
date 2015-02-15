@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dip"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etStart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上海市浦东新区秀康路" />
+
+
+        <EditText
+            android:id="@+id/etEnd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上海市浦东新区年家浜路521号" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:orientation="horizontal" >
+            <EditText
+                android:id="@+id/etSpeed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" 4" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/rotatebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="反转" />
+            <Button
+                android:id="@+id/routebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="路线" />
+            <Button
+                android:id="@+id/mockbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="开走" />
+            <Button
+                android:id="@+id/stopbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="结束" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:orientation="horizontal" >
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:lines="3"
+        android:text="点击、长按、双击地图以获取经纬度和地图状态" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+        <CheckBox
+            android:layout_width="80dip"
+            android:layout_height="fill_parent"
+            android:text="来回走"
+            android:id="@+id/roundCheckBox"
+            android:checked="true"
+            android:layout_gravity="right" />
+        <Button
+            android:id="@+id/manbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手动路线" />
+
+    </RelativeLayout>
+
+</LinearLayout>
